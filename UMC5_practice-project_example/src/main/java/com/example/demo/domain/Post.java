@@ -1,10 +1,10 @@
 package com.example.demo.domain;
 
 import com.example.demo.domain.common.BaseEntity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Post extends BaseEntity {
@@ -14,6 +14,9 @@ public class Post extends BaseEntity {
 	private Long id;
 	private String text;
 	private String title;
+
+	@OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
+	private List<Comment> commetList = new ArrayList<>();
 
 	public Post(String title, String text) {
 		this.title = title;

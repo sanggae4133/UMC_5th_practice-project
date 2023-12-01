@@ -1,5 +1,9 @@
 package com.example.demo.controller;
 
+import com.example.demo.dto.Member.MemberDto;
+import com.example.demo.dto.Member.MemberUpdateRequestDto;
+import com.example.demo.dto.Member.MemberUpdateResponseDto;
+import com.example.demo.dto.SignupRequestDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,10 +25,10 @@ public class MemberController {
     // 	그리고 MemberService 메서드로 DTO를 전달해서 Member의 생성자로 생성합니다.
     // 리턴타입은 String 그대로 두셔도 됩니다.
     @PostMapping("/signup")
-    public Long signup(
-            @RequestBody SignUpRequest request// 회원가입시 필요한 정보를 담은 Dto를 넣어주세요
-    ) {
-        return ?;
+    // 회원가입시 필요한 정보를 담은 Dto를 넣어주세요
+    public String signup(@RequestBody SignupRequestDto request) {
+        memberService.join(request);
+        return "success";
     }
 
 
@@ -35,7 +39,7 @@ public class MemberController {
 
     @GetMapping("")
     public MemberDto getMemberDto(Long memberId) {
-        return ?;
+        return memberService.findMemberById(memberId);
     }
 
 
@@ -44,9 +48,7 @@ public class MemberController {
 // 	MemberService 에서 Member 정보를 변경하면 됩니다.
 
     @PatchMapping("")
-    public MemberUpdateResponse update(
-            @RequestBody MemberUpdateRequest request
-    ) {
-        return ?;
+    public MemberUpdateResponseDto update(@RequestBody MemberUpdateRequestDto request) {
+        return memberService.updateMember(request);
     }
 }

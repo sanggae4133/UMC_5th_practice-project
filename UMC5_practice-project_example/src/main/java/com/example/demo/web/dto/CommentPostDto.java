@@ -1,13 +1,17 @@
-package com.example.demo.dto;
+package com.example.demo.web.dto;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@Getter
 @Builder
-public class CommentDto {
+public class CommentPostDto {
+
+    private Long id;
 
     private String text;
 
@@ -15,7 +19,8 @@ public class CommentDto {
 
     private Long postId;
 
-    public CommentDto(String text, Long memberId, Long postId) {
+    public CommentPostDto(Long id, String text, Long memberId, Long postId) {
+        this.id = id;
         this.text = text;
         this.memberId = memberId;
         this.postId = postId;

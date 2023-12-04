@@ -1,8 +1,13 @@
-package com.example.demo.dto;
+package com.example.demo.web.dto;
 
-public class PostRequest {
+public class PostUpdateRequest {
+	private Long id;
 	private String title;
 	private String text;
+
+	public Long getId() {
+		return id;
+	}
 
 	public String getTitle() {
 		return title;

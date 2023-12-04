@@ -1,10 +1,9 @@
-package com.example.demo.controller;
+package com.example.demo.web.controller;
 
-import com.example.demo.dto.Member.MemberDto;
-import com.example.demo.dto.Member.MemberUpdateRequestDto;
-import com.example.demo.dto.Member.MemberUpdateResponseDto;
-import com.example.demo.dto.SignupRequestDto;
-import org.springframework.stereotype.Controller;
+import com.example.demo.web.dto.Member.MemberDto;
+import com.example.demo.web.dto.Member.MemberUpdateRequestDto;
+import com.example.demo.web.dto.Member.MemberUpdateResponseDto;
+import com.example.demo.web.dto.SignupRequestDto;
 import org.springframework.web.bind.annotation.*;
 
 import com.example.demo.service.MemberService;

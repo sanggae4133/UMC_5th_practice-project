@@ -1,4 +1,4 @@
-package com.example.demo.dto;
+package com.example.demo.web.dto;
 
 import com.example.demo.domain.enums.Gender;
 import jakarta.persistence.EnumType;

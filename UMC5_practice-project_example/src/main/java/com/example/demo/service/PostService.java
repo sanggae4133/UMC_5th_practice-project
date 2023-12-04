@@ -7,14 +7,15 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.domain.Post;
-import com.example.demo.dto.PostDto;
-import com.example.demo.dto.PostRequest;
-import com.example.demo.dto.PostUpdateRequest;
-import com.example.demo.dto.PostUpdateResponse;
+import com.example.demo.web.dto.PostDto;
+import com.example.demo.web.dto.PostRequest;
+import com.example.demo.web.dto.PostUpdateRequest;
+import com.example.demo.web.dto.PostUpdateResponse;
 import com.example.demo.repository.PostRepository;
 
 @Service
 public class PostService {
+	/*
 
 	private final PostRepository postRepository;
 
@@ -58,6 +59,8 @@ public class PostService {
 		);
 	}
 
+
+	 */
 
 
 }

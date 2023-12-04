@@ -9,11 +9,13 @@ import java.util.List;
 @Entity
 public class Post extends BaseEntity {
 
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String text;
 	private String title;
+	/*
 
 	@OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
 	private List<Comment> commetList = new ArrayList<>();
@@ -45,4 +47,6 @@ public class Post extends BaseEntity {
 
 	protected Post() {
 	}
+
+	 */
 }

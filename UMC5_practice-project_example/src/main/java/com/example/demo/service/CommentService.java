@@ -1,8 +1,8 @@
 package com.example.demo.service;
 
 import com.example.demo.domain.Comment;
-import com.example.demo.dto.CommentDto;
-import com.example.demo.dto.CommentPostDto;
+import com.example.demo.web.dto.CommentDto;
+import com.example.demo.web.dto.CommentPostDto;
 import com.example.demo.repository.CommentRepository;
 import com.example.demo.repository.MemberRepository;
 import com.example.demo.repository.PostRepository;
@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class CommentService {
+    /*
 
     private final CommentRepository commentRepository;
     private final MemberRepository memberRepository;
@@ -26,6 +27,7 @@ public class CommentService {
         Comment savedComment = commentRepository.save(comment);
         return savedComment.getId();
     }
+
 
     @Transactional
     public CommentDto updateComment(CommentPostDto request) {
@@ -41,4 +43,6 @@ public class CommentService {
                 .postId()
                 .build();
     }
+
+     */
 }

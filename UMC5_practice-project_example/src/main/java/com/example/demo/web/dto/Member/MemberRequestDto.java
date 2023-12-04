@@ -1,4 +1,4 @@
-package com.example.demo.dto.Member;
+package com.example.demo.web.dto.Member;
 
 
 import com.example.demo.domain.enums.Gender;

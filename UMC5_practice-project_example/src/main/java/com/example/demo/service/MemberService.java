@@ -2,10 +2,10 @@ package com.example.demo.service;
 
 
 import com.example.demo.domain.Member;
-import com.example.demo.dto.Member.MemberDto;
-import com.example.demo.dto.Member.MemberUpdateRequestDto;
-import com.example.demo.dto.Member.MemberUpdateResponseDto;
-import com.example.demo.dto.SignupRequestDto;
+import com.example.demo.web.dto.Member.MemberDto;
+import com.example.demo.web.dto.Member.MemberUpdateRequestDto;
+import com.example.demo.web.dto.Member.MemberUpdateResponseDto;
+import com.example.demo.web.dto.SignupRequestDto;
 import com.example.demo.repository.MemberRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;

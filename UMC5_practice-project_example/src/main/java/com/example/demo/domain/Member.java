@@ -14,6 +14,9 @@ import com.example.demo.domain.mapping.MemberMission;
 import com.example.demo.domain.mapping.MemberPrefer;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -23,23 +26,24 @@ import static lombok.AccessLevel.PROTECTED;
 
 @Entity
 @Getter
+@DynamicUpdate
+@DynamicInsert
 @Builder
-@NoArgsConstructor(access = PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-@Setter
 public class Member extends BaseEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	// 여기에 뭐가 들어갈까요?
 	private Long id;
 
-	// 나머지 필드를 선언해주세요
-
+	@Column(nullable = false, length = 20)
 	private String name;
 
+	@Column(nullable = false, length = 40)
 	private String address;
 
+	@Column(nullable = false, length = 40)
 	private String specAddress;
 
 	@Enumerated(EnumType.STRING)
@@ -51,12 +55,14 @@ public class Member extends BaseEntity {
 
 	@Enumerated(EnumType.STRING)
 	@Column(columnDefinition = "VARCHAR(15) DEFAULT 'ACTIVE'")
-	private MemberStatus memberStatus;
+	private MemberStatus status;
 
 	private LocalDate inactiveDate;
 
+	//    @Column(nullable = false, length = 50)
 	private String email;
 
+	@ColumnDefault("0")
 	private Integer point;
 
 	@OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
@@ -70,18 +76,4 @@ public class Member extends BaseEntity {
 
 	@OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
 	private List<MemberMission> memberMissionList = new ArrayList<>();
-
-	// 생성자와 Getter, Setter 도 필요합니다
-	// Setter 는 안쓰는것이 좋지만 예제의 복잡도를 줄이기 위해 그냥 과제에서는 쓰는것으로 합니다
-
-	//**
-	// * 이건 지우지말고 냅두세요
-	// */
-
-	/*
-	protected Member() {
-	}
-
-	*/
-
 }

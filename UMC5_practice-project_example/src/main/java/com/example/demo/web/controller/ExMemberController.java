@@ -42,6 +42,7 @@ public class ExMemberController {
     }
 
 
+    /*
 // 	3. Member 정보 업데이트
 //  변경된 정보와 변경할 정보를 Dto로 각각 요청/응답하면됩니다.
 // 	MemberService 에서 Member 정보를 변경하면 됩니다.
@@ -50,4 +51,6 @@ public class ExMemberController {
     public ExMemberUpdateResponseDto update(@RequestBody ExMemberUpdateRequestDto request) {
         return memberService.updateMember(request);
     }
+
+     */
 }

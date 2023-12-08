@@ -1,2 +1,4 @@
-package com.example.demo.service.MemberService;public class MemberQueryServiceImple {
+package com.example.demo.service.MemberService;
+
+public class MemberQueryServiceImple {
 }

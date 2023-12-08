@@ -31,7 +31,7 @@ public class ExMemberService {
 				.specAddress(request.getSpecAddress())
 				.gender(request.getGender())
 				.socialType(KAKAO)
-				.memberStatus(ACTIVE)
+				.status(ACTIVE)
 				.inactiveDate(LocalDate.now())
 				.email(request.getEmail())
 				.point(0)
@@ -52,14 +52,14 @@ public class ExMemberService {
 				.specAddress(member.getSpecAddress())
 				.gender(member.getGender())
 				.socialType(member.getSocialType())
-				.memberStatus(member.getMemberStatus())
+				.memberStatus(member.getStatus())
 				.inactiveDate(member.getInactiveDate())
 				.email(member.getEmail())
 				.point(member.getPoint())
 				.build();
 	}
 
-
+/*
 	// 	3. 엔티티를 업데이트하는 방법 -> repository.findById()를 호출한 뒤 setter로 필드값들을 변경해준다.
 	@Transactional
 	public ExMemberUpdateResponseDto updateMember(ExMemberUpdateRequestDto request) {
@@ -82,11 +82,13 @@ public class ExMemberService {
 				.specAddress(member.getSpecAddress())
 				.gender(member.getGender())
 				.socialType(member.getSocialType())
-				.memberStatus(member.getMemberStatus())
+				.memberStatus(member.getStatus())
 				.inactiveDate(member.getInactiveDate())
 				.email(member.getEmail())
 				.point(member.getPoint())
 				.build();
 	}
+
+ */
 }
 

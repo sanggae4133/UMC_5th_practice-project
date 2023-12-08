@@ -1,2 +1,4 @@
-package com.example.demo.service.MemberService;public interface MemberQueryService {
+package com.example.demo.service.MemberService;
+
+public interface MemberQueryService {
 }
